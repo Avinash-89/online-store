@@ -1,0 +1,268 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Section */
+header {
+    background-color: #FF6F61;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+header nav ul li{
+    list-style-type: none;
+}
+header nav a {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+header nav a:hover {
+    color: #ffba92;
+}
+
+header .cart button {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+header .cart button:hover {
+    background-color: #FFBA92;
+}
+
+main {
+    background-image: url('https://example.com/your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+/* Search Bar */
+.search-container {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    max-width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://www.shutterstock.com/image-photo/different-bakery-products-on-wooden-260nw-1325683346.jpg') no-repeat center center/cover;
+    color: rgb(37, 13, 13);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Product Section */
+.products {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #FF6F61;
+}
+
+.product-card button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #FF4C39;
+}
+
+/* Cart Modal */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-modal-content {
+    background-color: white;
+    padding: 30px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-modal-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-modal-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.cart-modal-content ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-modal-content p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.cart-actions button {
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 45%;
+}
+
+.cart-actions button:hover {
+    background-color: #FF4C39;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
